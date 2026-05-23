@@ -1,0 +1,6 @@
+## Caso 16: El equipo no ha definido criterios claros para la revisión de código y se presentan conflictos sobre calidad.
+
+### Propuesta de Solución en Git:
+1. **Implementación de PR Templates (Plantillas de Pull Request):** Crear un archivo oculto en la raíz del repositorio (`.github/pull_request_template.md`). Esta plantilla obligará a cada desarrollador a llenar una lista de verificación antes de pedir revisión (ej. si incluye pruebas unitarias, si cumple la arquitectura, si no repite código), estandarizando los criterios de aceptación.
+2. **Automatización de Reglas con SonarQube / Linters en GitHub Actions:** Configurar un flujo de trabajo (Workflow) automatizado en GitHub. Cada vez que alguien suba código, el servidor remoto evaluará automáticamente la calidad del software (detección de bugs, vulnerabilidades y deuda técnica). Si el código no alcanza el porcentaje de calidad mínimo establecido por el equipo, GitHub bloqueará el Merge automáticamente.
+3. **Métricas de Cobertura de Código Obligatorias:** Establecer reglas de protección de ramas en GitHub que exijan un mínimo de aprobación en revisiones de pares (Code Review) y que todas las pruebas automatizadas estén en verde para mitigar discusiones subjetivas sobre la calidad.
