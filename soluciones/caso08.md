@@ -1,0 +1,6 @@
+git ## Caso 8: El equipo no está seguro de cuál herramienta de control de versiones utilizar y cada uno propone una diferente.
+
+### Propuesta de Solución en Git:
+1. **Centralización Técnica en el Repositorio Base:** Definir formalmente el uso de **Git** como el sistema de control de versiones estándar del proyecto. Para resolver el conflicto, se añade un archivo markdown (`VCS_AGREEMENT.md`) en la raíz que detalla las ventajas técnicas de Git (distribuido, ramificación eficiente y compatibilidad masiva).
+2. **Definición del Servidor Remoto Común:** Establecer **GitHub** como la plataforma oficial de alojamiento en la nube, garantizando que todos los miembros sincronicen sus cambios en un único origen (`origin`) y utilicen un flujo de trabajo unificado.
+3. **Estandarización de Herramientas Locales:** Permitir que cada desarrollador use su interfaz preferida de manera local (como la terminal integrada de VS Code, Git Bash o la GUI de GitHub Desktop) ya que, al estar basadas en el mismo núcleo de Git, todas interactúan de forma transparente con el historial del repositorio sin generar conflictos de compatibilidad.
