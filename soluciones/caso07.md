@@ -1,0 +1,6 @@
+## Caso 7: Un miembro del equipo no entiende bien la arquitectura del software y comete errores recurrentes.
+
+### Propuesta de Solución en Git:
+1. **Implementación de Git Hooks locales (Pre-commit / Pre-push):** Configurar scripts automatizados en el repositorio local del desarrollador. Cada vez que intente hacer un `git commit`, un linter automático revisará que su código cumpla con las reglas estructurales de la arquitectura antes de permitirle guardar el cambio.
+2. **Protección de Ramas Críticas:** Bloquear la rama principal (`main`) en GitHub para que nadie pueda subir cambios directamente. Todo código nuevo debe pasar obligatoriamente por una rama intermedia mediante un Pull Request.
+3. **Validación por Integración Continua (CI):** Configurar que al subir la rama, un entorno de pruebas automatizado intente compilar el proyecto. Si el código rompe la arquitectura establecida, GitHub bloqueará automáticamente el botón de "Merge", impidiendo que los errores recurrentes ingresen al proyecto final.
