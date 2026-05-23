@@ -1,0 +1,6 @@
+## Caso 9: Existen divergencias en la forma de escribir el código (estilos, nombres de variables, estructuras).
+
+### Propuesta de Solución en Git:
+1. **Centralización de Archivos de Configuración (.editorconfig / .eslintrc):** Crear e incluir en la raíz del repositorio Git los archivos de configuración de estilos estándar para el proyecto. Al estar versionados en Git, todos los miembros del equipo jalan la misma configuración automáticamente al clonar el proyecto.
+2. **Uso de un Git Hook de Pre-commit (Husky / Linters):** Configurar un hook de Git que se ejecute localmente de manera automática justo antes de cada `git commit`. Este script ejecutará un formateador de código (como Prettier) que revisará la sintaxis y los nombres de variables. Si alguien no cumple con el estándar, Git rechazará el commit.
+3. **Automatización de Estilos en el Servidor Remoto:** Implementar un flujo de trabajo en GitHub Actions que valide el estilo de código en cada Pull Request. De esta manera, si un desarrollador intentó saltarse el linter local, GitHub bloqueará la integración a la rama principal hasta que el estilo sea corregido.
