@@ -1,0 +1,14 @@
+name: Prueba piloto CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Ejecutar prueba básica
+        run: echo "Prueba automatizada ejecutada correctamente"
